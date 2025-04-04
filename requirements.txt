@@ -1,0 +1,18 @@
+# Python
+python-dotenv>=1.0.1
+
+# FastAPI
+aiomysql>=0.2.0
+alembic>=1.14.0
+fastapi>=0.115.6
+google-cloud-storage>=3.1.0
+greenlet>=3.1.1
+ollama>=0.4.7
+sqlalchemy>=2.0.37
+uvicorn>=0.34.0
+
+# Docker
+cryptography>=44.0.0
+
+# AWS
+boto3>=1.37.25
