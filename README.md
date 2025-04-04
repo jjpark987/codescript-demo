@@ -1,6 +1,6 @@
 # CodeScript Demo
 
-This repository contains the demo version for CodeScript. 
+This repository contains the demo version for [CodeScript](http://codescript-demo-env.eba-edrru6it.us-east-2.elasticbeanstalk.com/) using AWS Elastic Beanstalk.
 
 For the local version of the app, check out these repositories:
 
