@@ -13,7 +13,7 @@ async def get_random_problem_dynamo() -> dict:
     item = choice(items)
     
     signed_urls = [get_signed_image_url_s3('images/' + basename(path)) for path in item.get('image_paths', [])]
-    print(ProblemResponse.model_validate(item), signed_urls)
+
     return {
         'problem': ProblemResponse.model_validate(item),
         'image_urls': signed_urls
