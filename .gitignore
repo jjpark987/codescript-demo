@@ -1,8 +1,15 @@
-# Elastic Beanstalk Files
+# App
+.env
+.venv/
+**/__pycache__/
+build/
+**/node_modules/
+**/.DS_Store
+
+# Elastic Beanstalk
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
-.env
-frontend/
-.DS_Store
+# Lambda
+.serverless/
