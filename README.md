@@ -11,19 +11,31 @@ Please read this [Dev article](https://dev.to/jjpark987/building-a-code-problem-
 
 ## AWS Elastic Beanstalk
 
-1. Initialize Elastic Beanstalk
+1. Set up .env with AWS credentials
+
+2. Create a build version for frontend
 
 ```zsh
+cd frontend
+npm install
+npm run build
+aws s3 sync ../build/ s3://codescript-demo-frontend --delete
+```
+
+3. Initialize Elastic Beanstalk
+
+```zsh
+cd codescript-demo
 eb init
 ```
 
-2. Create an environment
+4. Create an environment
 
 ```zsh
 eb create codescript-demo-env
 ```
 
-3. Deploy application
+5. Deploy application
 
 ```zsh
 eb deploy --verbose
