@@ -4,7 +4,7 @@
 **/__pycache__/
 build/
 **/node_modules/
-.DS_Store
+**/.DS_Store
 
 # Elastic Beanstalk
 .elasticbeanstalk/
