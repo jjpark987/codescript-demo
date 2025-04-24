@@ -1,0 +1,16 @@
+service: codescript-demo
+
+provider:
+  name: aws
+  runtime: python3.11
+  region: us-east-2
+
+functions:
+  app:
+    handler: app.main.handler
+    events:
+      - http:
+          path: /{proxy+}
+          method: any
+          cors: true
+          

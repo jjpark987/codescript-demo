@@ -1,9 +1,11 @@
+from app.config import add_cors_middleware
 from app.crud import get_random_problem_dynamo
 from app.schemas import LLMResponse
 from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
+from mangum import Mangum
 
 app = FastAPI()
+add_cors_middleware(app)
 
 @app.get('/problems/random')
 async def get_random_problem_route():
@@ -19,4 +21,4 @@ def generate_feedback_route():
     }
     return LLMResponse.model_validate(demo_response)
 
-app.mount('/', StaticFiles(directory='dist', html=True), name='dist')
+handler = Mangum(app)
