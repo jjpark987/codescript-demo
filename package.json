@@ -1,0 +1,23 @@
+{
+  "name": "codescript-demo",
+  "version": "1.0.0",
+  "description": "This repository contains the demo version for [CodeScript](http://codescript-demo-env.eba-edrru6it.us-east-2.elasticbeanstalk.com/) using AWS Elastic Beanstalk.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjpark987/codescript-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjpark987/codescript-demo/issues"
+  },
+  "homepage": "https://github.com/jjpark987/codescript-demo#readme",
+  "devDependencies": {
+    "serverless-python-requirements": "^6.1.2"
+  }
+}

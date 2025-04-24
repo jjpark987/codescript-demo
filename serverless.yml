@@ -13,4 +13,12 @@ functions:
           path: /{proxy+}
           method: any
           cors: true
-          
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    slim: true
+    pythonBin: python3
