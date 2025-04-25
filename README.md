@@ -11,17 +11,20 @@ Please read this [Dev article](https://dev.to/jjpark987/building-a-code-problem-
 
 ## AWS Lambda
 
-1. Deploy Lambda backend and obtain endpoint url
+1. Set up .env with AWS credentials
+
+2. Deploy Lambda backend and obtain endpoint url
 
 ```zsh
 serverless deploy
 ```
 
-2. Set up frontend/.env using endpoint url from step 1
+3. Set up frontend/.env using endpoint url from step 2
 
-3. Have a frontend build version in the root inside build/ and deploy
+4. Create a build version for frontend
 
 ```zsh
+cd frontend
 npm install
 npm run build
 aws s3 sync ../build/ s3://codescript-demo-frontend --delete

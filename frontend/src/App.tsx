@@ -11,8 +11,8 @@ import { indentWithTab } from '@codemirror/commands';
 import { python } from '@codemirror/lang-python';
 
 // use for npm run build
-const RANDOM_PROBLEM_URL = import.meta.env.VITE_RANDOM_PROBLEM_URL;
-const GENERATE_FEEDBACK_URL = import.meta.env.VITE_GENERATE_FEEDBACK_URL;
+const RANDOM_PROBLEM_URL = 'https://u1ebssb3n0.execute-api.us-east-2.amazonaws.com/dev/problems/random';
+const GENERATE_FEEDBACK_URL = 'https://u1ebssb3n0.execute-api.us-east-2.amazonaws.com/dev/generate_feedback';
 
 interface Problem {
   title: string;

@@ -12,7 +12,29 @@ functions:
       - http:
           path: /{proxy+}
           method: any
-          cors: true
+          cors: 
+            origin: 'http://codescript-demo-frontend.s3-website-us-east-2.amazonaws.com'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: true
+      - http:
+          path: /{proxy+}
+          method: options
+          cors: 
+            origin: 'http://codescript-demo-frontend.s3-website-us-east-2.amazonaws.com'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: true
 
 plugins:
   - serverless-python-requirements
@@ -21,4 +43,15 @@ custom:
   pythonRequirements:
     dockerizePip: true
     slim: true
-    pythonBin: python3
+    useDownloadCache: false
+    useStaticCache: false
+    pipCmdExtraArgs:
+      - "--platform"
+      - "manylinux2014_x86_64"
+      - "--implementation"
+      - "cp"
+      - "--python-version"
+      - "3.11"
+      - "--only-binary=:all:"
+      - "--upgrade"
+      
