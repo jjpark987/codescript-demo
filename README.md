@@ -27,5 +27,6 @@ serverless deploy
 cd frontend
 npm install
 npm run build
-aws s3 sync ../build/ s3://codescript-demo-frontend --delete
 ```
+
+5. Sync frontend build to S3 from the web console
